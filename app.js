@@ -8,18 +8,25 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.set('view engine', 'ejs');
 
+var items=[];
+var item;
+
 
 app.get("/",function(req,res){
   const day=["sunday","monday","tuesday","thrusday","friday","saturday"];
   var today =new Date();
   var currentDay =today.getDay();
 
-res.render('list',{dayOfTheWeek:day[currentDay]});
+res.render('list',{dayOfTheWeek:day[currentDay] ,newListItems:items });
 });
 
 app.post("/",function(req,res){
-  res.send("input taken");
-  console.log(req.body.newItem);
+  // res.send("input taken");
+ item =req.body.newItem;
+  items.push(item);
+
+  res.redirect("/");
+
 });
 
 
