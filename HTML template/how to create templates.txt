@@ -1,0 +1,31 @@
+to create templates we are going to use the ejs tool 
+
+how to use  it 
+npm install ejs
+
+
+
+const ejs=require('ejs');
+const express=('express');
+const app=express();
+
+app.set('view engine', 'ejs');
+
+we have to create a folder named views in the folder and we have to create a file named <something> .ejs 
+
+
+
+ in the route do a command called 
+res.render("something",{the ejs indicator : what it should be made});
+
+the ejs indicator is pretty much the thing which is to be changed and new html pages are generated automatically.
+it has a specific format <%= sometext %>
+========================================================================================================================================================
+
+app.set('view engine', 'ejs');
+app.get('/', (req, res) => {
+  res.render('index', {
+	foo: 'FOO'
+	});
+});
+==========================================================================================================================================================

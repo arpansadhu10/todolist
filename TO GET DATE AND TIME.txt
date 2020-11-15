@@ -1,0 +1,3 @@
+var today= new Date();
+
+today.getDay() :::::::::::it gives day as numbers  :::sunday 0 ;monday 1:....:saturday =7;
