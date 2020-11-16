@@ -1,0 +1,7 @@
+somethings in the websites remain constant overall for example the header and the footer
+so instead of repeating them again and angin we can take the help of ejs to create templates
+and include them in our project using the command called 
+
+<%- include("header") -%>
+
+and these are stored in a folder called views and file name called header.ejs and footer.ejs

@@ -1,0 +1,5 @@
+we need to create a file of desired name and use the code
+
+
+
+const date =require(__dirname +"/date.js");
