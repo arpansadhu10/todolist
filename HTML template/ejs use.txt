@@ -1,0 +1,30 @@
+how to render pages
+ 
+
+app.get("/",function(req,res){
+res.render("home");
+});
+
+
+=======================================================================================================================================================
+render specific text or things
+
+
+app.get("/",function(req,res){
+res.render('home' , {startingContent:startingHomeContent});                  
+});
+
+home======name of the ejs file in views folder
+startingContent ======it is the name of the variable which is given in the home.ejs file within the <%= startingContent %> 
+startingHomeContent====it is the text that needs to be passed to in place of the startingContent
+
+==========================================================================================================================================================
+
+how to render header and footer as a template in every page
+
+
+<%- include("header") -%> in the ejs file
+and there should be files named header and footer in the views folder
+
+
+IT IS A GOOD PRACTICE TO PUT THE HEADER ANF FOOTER IN THE FILE CALLED partials AND USE <%- include("partials/header") -%>

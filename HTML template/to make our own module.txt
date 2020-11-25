@@ -3,3 +3,28 @@ we need to create a file of desired name and use the code
 
 
 const date =require(__dirname +"/date.js");
+
+
+in the module create a function and return the required thing 
+
+and ata the top write
+===================================
+= module.exports=functionname;   
+===================================
+without () otherwise it will be called then and there only
+
+
+
+
+to use multiple functions from our own amde modules
+
+do something as  
+==================================
+=module.exports.getDate =getDate;  
+==================================
+ before the function declaration
+do this before every function declaration
+
+
+and in the main js file call it by using 
+date.getDate(); ////////date iss the name oh the js file module of our own

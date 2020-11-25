@@ -3,26 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>day of the week</title>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+    <div class="box" id="heading">
+
+
 <h1> today is <%= dayOfTheWeek %></h1>
+  </div>
 
-    <ul>
-      <li>buy food</li>
-      <li>make food</li>
-      <li>eat food</li>
+
+  <div class="box" >
+
       <%  for(var i=0;i<newListItems.length ;i++){  %>
-
-          <li><%= newListItems[i] %></li>
+    <div class="item">
+        <input type="checkbox" id="inline">
+        <p><%= newListItems[i] %></p>
+    </div>
       <%  } %>
 
-    </ul>
 
-    <form class="" action="/" method="post">
-      <input type="text" name="newItem" value="">
-      <input type="submit" name="submit" value="submit">
+
+    <form class="item" action="/" method="post">
+    <input type="text" name="newItem" value="" autocomplete="off" placeholder="New Item">
+    <button type="submit" name="button">+</button>
 
     </form>
+
+
+
+
+
+
+
+
+  </div>
 
   </body>
 </html>
